@@ -59,7 +59,7 @@ class BlogPost(db.Model):
     img_url: Mapped[str] = mapped_column(String(250), nullable=False)
 
 
-class User(db.Model):
+class User(db.Model, UserMixin):
     __tablename__: str = "user_table"
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     user_email: Mapped[str] = mapped_column(
@@ -68,6 +68,9 @@ class User(db.Model):
         String(250), unique=True, nullable=False)
     user_password: Mapped[str] = mapped_column(
         String(30), unique=False, nullable=False)
+
+    def is_active(self):
+        return True
 
 
 with app.app_context():
