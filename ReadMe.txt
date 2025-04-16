@@ -1,3 +1,3 @@
-Files for days xx to xx.
+Files for day 69
 
-Course URI:  TO FILL OUT
+Course URI:  https://www.udemy.com/course/100-days-of-code/
